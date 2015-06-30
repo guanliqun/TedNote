@@ -92,7 +92,7 @@ follow:
 customLinks:
   - item:
     - text: NOSQL
-      url: http://www.nosql-base.org
+      url: http://nosql-database.org/
     - text: Jekyll
       url: http://jekyllrb.com
     - text: Jekyll Theme
