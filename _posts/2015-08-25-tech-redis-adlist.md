@@ -17,6 +17,7 @@ comments: true
 闲话少说，下面分别对adlist.h和adlist.c 代码进行中文分析注释说明。
 
 #2，adlist.h
+```C++
   1 /* adlist.h - A generic doubly linked list implementation
   2  *
   3  * Copyright (c) 2006-2012, Salvatore Sanfilippo <antirez at gmail dot com>
@@ -119,10 +120,11 @@ comments: true
 100 #define AL_START_TAIL 1
 101 
 102 #endif /* __ADLIST_H__ */
+```
                                                                                
                                                                                
 #3，adlist.c
-
+```C++
   1 /* adlist.c - A generic doubly linked list implementation
   2  *
   3  * Copyright (c) 2006-2010, Salvatore Sanfilippo <antirez at gmail dot com>
@@ -469,6 +471,6 @@ comments: true
 344     tail->next = list->head;
 345     list->head = tail;
 346 }
-
+```
 
 版权声明：本文为博主原创文章，未经博主允许不得转载。
