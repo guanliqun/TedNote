@@ -1,3 +1,11 @@
+---
+layout: post
+title: Redis3.03代码阅读(1)-adlist代码分析
+category: 技术
+comments: true
+---
+
+#1，概述
 本文作为redis代码阅读的笔记。以下内容主要是针对adlist.h/adlist.c文件中的list链表进行代码分析和注释。
 总体上来说该adlist有如下几个特点：
 1，通过c语言实现了泛型的list链表，同时实现了iterator迭代器。虽然简单，但是很巧妙。
@@ -7,7 +15,8 @@
 当然如果仅仅是redis内部使用的数据结构，并且作者很有把握，这样写代码能省略部分错误检查的开销。
 
 闲话少说，下面分别对adlist.h和adlist.c 代码进行中文分析注释说明。
-adlist.h
+
+#2，adlist.h
   1 /* adlist.h - A generic doubly linked list implementation
   2  *
   3  * Copyright (c) 2006-2012, Salvatore Sanfilippo <antirez at gmail dot com>
@@ -112,7 +121,7 @@ adlist.h
 102 #endif /* __ADLIST_H__ */
                                                                                
                                                                                
-adlist.c
+#3，adlist.c
 
   1 /* adlist.c - A generic doubly linked list implementation
   2  *
