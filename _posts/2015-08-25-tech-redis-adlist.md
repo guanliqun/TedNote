@@ -86,7 +86,7 @@ comments: true
  66 #define listLength(l) ((l)->len)            //获取list长度
  67 #define listFirst(l) ((l)->head)            //获取list头部
  68 #define listLast(l) ((l)->tail)             //获取list尾部
-69 #define listPrevNode(n) ((n)->prev)         //获取某个节点的前置
+ 69 #define listPrevNode(n) ((n)->prev)         //获取某个节点的前置
  70 #define listNextNode(n) ((n)->next)         //获取某个节点的后置
  71 #define listNodeValue(n) ((n)->value)       //获取某给节点的值,这里的value不是值，而是函数指针？
  72 
@@ -193,7 +193,7 @@ comments: true
  66     while(len--) {
  67         next = current->next;   //遍历节点
  68         if (list->free) list->free(current->value);
-  69         zfree(current);     //这里已经断开了。只能通过next来找到余下来的listNode串
+ 69         zfree(current);     //这里已经断开了。只能通过next来找到余下来的listNode串
  70         current = next;     //current指向next当前的节点
  71     }
  72     zfree(list);        //最后把list头清理掉
@@ -395,7 +395,7 @@ comments: true
 268             }
 269         } else
 270             value = node->value;                                //没指定dup函数直接赋值value
-271         if (listAddNodeTail(copy, value) == NULL) {             //从尾端开始插入listNode，这样能保证新的list和原来的一样排序
+271         if (listAddNodeTail(copy, value) == NULL) {       //从尾端开始插入listNode，这样能保证新的list和原来的一样排序   
 272             listRelease(copy);
 273             listReleaseIterator(iter);
 274             return NULL;
